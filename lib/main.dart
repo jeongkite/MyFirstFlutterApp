@@ -24,14 +24,14 @@ class MyApp extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
-                    'Oeschinen Lake Campground',
+                    'Tofindpeter Nowon',
                     style: TextStyle(
                       fontWeight: FontWeight.bold
                     ),
                   ),
                 ),
                 Text(
-                  'Kandersteg, Switzerland',
+                  'Seoul, Korea',
                   style: TextStyle(
                     color: Colors.grey[500]
                   ),
@@ -61,12 +61,11 @@ class MyApp extends StatelessWidget {
 
     Widget textSection = const Padding(padding: EdgeInsets.all(32),
       child: Text(
-        'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
-        'Alps. Situated 1,578 meters above sea level, it is one of the '
-        'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
-        'half-hour walk through pastures and pine forest, leads you to the '
-        'lake, which warms to 20 degrees Celsius in the summer. Activities '
-        'enjoyed here include rowing, and riding the summer toboggan run.',
+        '분위기는 참 좋았다. 위 사진에서 보이듯 와인도 판매하는 레스토랑이었음. '
+        '와인은 아니었지만 오렌지 샹그리아였나 어쨌든 술 종류를 하나 마셨는데 맛있었다. '
+        '음식은 생각보다 양이 많았다. 맛은 막 그렇게 좋지 않았다. 면이 두꺼웠는데 그게 참 특이했다. '
+        '근데 나는 일반적인 스파게티 면이 제일 맛있는 것 같다. '
+        '언제나 그렇듯 토마토 해산물 파스타를 먹었는데 오 또 오고싶다~! 이런건 아녔음. ',
         softWrap: true,
       ),
     );
@@ -78,6 +77,13 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Layout Demo'),
         ),
         body: Column(children: [
+          Image.asset(
+            'images/wine.jpg',
+            // TODO: 이거 사이즈 커져서 화면 밖으로 넘어가면 오류나는데 이거 어떻게 해결할지 나중에 찾아보기!
+            width: 600,
+            height: 240,
+            fit: BoxFit.cover,
+          ),
           titleSection,
           buttonSection,
           textSection,

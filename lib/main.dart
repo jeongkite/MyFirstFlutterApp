@@ -48,6 +48,16 @@ class MyApp extends StatelessWidget {
       ),
     );
 
+    Color color = Theme.of(context).primaryColor;
+
+    Widget buttonSection = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        _bulidButtonColumn(color, Icons.call, 'CALL'),
+        _bulidButtonColumn(color, Icons.near_me, 'ROUTE'),
+        _bulidButtonColumn(color, Icons.share, 'SHARE'),
+      ],
+    );
     return MaterialApp(
       title: 'Flutter Layout Demo',
       home: Scaffold(
@@ -56,8 +66,30 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(children: [
           titleSection,
+          buttonSection,
         ],)
       ),
+    );
+  }
+
+  Column _bulidButtonColumn(Color color, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

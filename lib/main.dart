@@ -76,12 +76,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter Layout Demo'),
         ),
-        body: Column(children: [
+        body: ListView(children: [
           Image.asset(
             'images/wine.jpg',
             // TODO: 이거 사이즈 커져서 화면 밖으로 넘어가면 오류나는데 이거 어떻게 해결할지 나중에 찾아보기!
-            width: 600,
-            height: 240,
+            width: 300,
+            height: 400,
             fit: BoxFit.cover,
           ),
           titleSection,

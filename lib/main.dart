@@ -79,7 +79,6 @@ class MyApp extends StatelessWidget {
         body: ListView(children: [
           Image.asset(
             'images/wine.jpg',
-            // TODO: 이거 사이즈 커져서 화면 밖으로 넘어가면 오류나는데 이거 어떻게 해결할지 나중에 찾아보기!
             width: 300,
             height: 400,
             fit: BoxFit.cover,
@@ -112,4 +111,11 @@ class MyApp extends StatelessWidget {
       ],
     );
   }
+}
+
+class FavoriteWidget extends StatefulWidget {
+  const FavoriteWidget({super.key});
+
+  @override
+  State<FavoriteWidget> createState() => _FavoriteWidgetState();
 }
